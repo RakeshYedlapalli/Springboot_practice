@@ -1,0 +1,151 @@
+I will create an items class
+
+Class Items {
+    String Id
+    String iteName;
+    Category category;
+    String description;
+    }
+
+
+interface ItemsRepository extends JPARepository<> {
+
+
+//save();
+//findBy();
+findByCategory(categoryname );
+}
+
+
+class itemRepositoryImpl implements itemRepository {
+
+
+    findByCategory(String categoryName) {
+
+        databaseobject.query(query)
+    }
+}
+
+
+  /search?key=
+
+
+interface ItemSearch {
+
+    item
+}
+
+interface ItemService {
+
+
+
+}
+
+
+     Item createItem (Item item);
+    Item updateItem(Item item);
+    item deleteitmm(String id);
+
+
+class ItemServiceImpl implements ItemService {
+
+public static List<Items> items = new ArrayList<> ();
+
+@PostConstruct
+public void buildItemsData() {
+
+items = new ObjectMapper("filePath/items.json");
+
+}
+
+@ConfigurationProperties(prefix = "searchCriteria")
+public class SearchCriteriaComponent {
+
+public List<String> criteria;
+
+}
+
+public List<Items> searchForAnItem(String key) {
+
+
+
+
+        items.stream().filter(i-> i.itemname.contains(key) || i.descripton.contains(key)
+        || i.category.contains(key)).collect(Collectors.toList());
+}
+
+
+@Autowired
+ItemImplRepository itemImpl;
+    Item createItem(item item) {
+
+    itemImpl.save(item)
+
+    }
+
+    delete,
+    update
+}
+
+
+
+
+@RestController
+class ItemContrller {
+
+@Autowired
+ItemServiceImpl itemServiceImpl;
+@PostMapping("/search")
+public List<Item> create(@QueryParam("Key") key) {
+
+        return itemServiceImpl.searchForAnItem(key);
+
+}
+
+
+
+Filters :
+
+Input Sanitisation :
+
+Securing coding for develoeprs.
+
+
+
+
+
+ String str = "1221";
+        reve ="2121"
+ String str = "abc"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

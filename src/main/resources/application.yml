@@ -1,0 +1,49 @@
+olxconfig:
+ createdBy: s-system
+sizeLocalisationConfig:
+  sizeRange:
+    retry:
+     maxAttempts: 19
+
+
+listdata:
+  list:
+    - Rakesh
+    - Rakesh
+    - Rakesh
+    - Rakesh
+    - Rakesh
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+  endpoint:
+    shutdown:
+      enabled: true
+#
+#spring:
+#  security:
+#    user:
+#      name: admin
+#      password: admin-password
+#
+#  config:
+#    location: classpath:/custom-folder/
+#    name: custom-config.yml
+
+
+spring:
+  config:
+    name: custom-config
+    additional-location: file:/config/custom-config.yml
+
+
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: books
