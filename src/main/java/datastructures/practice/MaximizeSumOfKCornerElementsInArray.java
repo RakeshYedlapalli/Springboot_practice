@@ -1,5 +1,11 @@
 package datastructures.practice;
 
+import com.gap.sample.practice.Springboot_practice.runtimebeancreation.MyFactory;
+import newpackage.Items;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MaximizeSumOfKCornerElementsInArray {
 
     static int maxSum(int arr[], int K, int start, int end, int max_sum) {
@@ -37,5 +43,17 @@ public class MaximizeSumOfKCornerElementsInArray {
         int K = 3;
         int n = arr.length;
         maximizeSum(arr, K, n);
+
+        Items items = new Items("Rakesh","rajesh");
+        Items items2 = new Items("Rakesh","rajesh");
+
+        System.out.println(items.equals(items2));
+
+
+        List<Integer> list = new ArrayList<>();
+        boolean s = list.stream().filter(i-> i == 10).anyMatch(i->i==10);
+        System.out.println(s);
+
+
     }
 }
